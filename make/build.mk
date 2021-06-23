@@ -63,6 +63,7 @@ define mkbootimg
 		--base=$(ANDROID_BOOT_BASE) \
 		--output=$@ \
 		--cmdline="$(ANDROID_BOOT_CMDLINE)" \
+		--pagesize=4096 \
 		$(1)
 	$(NOECHO)echo -n SEANDROIDENFORCE >> $@
 endef
