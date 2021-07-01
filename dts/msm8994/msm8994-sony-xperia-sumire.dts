@@ -6,11 +6,16 @@
 	#address-cells = <0x02>;
 	#size-cells = <0x02>;
 	model = "SoMC Sumire-ROW";
-	compatible = "somc,sumire-row\0qcom,msm8994";
+	compatible = "somc,sumire-row", "qcom,msm8994";
 	qcom,msm-id = <0xcf 0x20001>;
 	qcom,pmic-id = <0x10009 0x1000a 0x00 0x00>;
 	interrupt-parent = <0x01>;
 	qcom,board-id = <0x08 0x00>;
+
+	sony-sumire {
+		model = "SoMC Sumire-ROW";
+		compatible = "somc,sumire-row", "qcom,msm8994", "lk2nd,device";
+	};
 
 	cpus {
 		#address-cells = <0x01>;
